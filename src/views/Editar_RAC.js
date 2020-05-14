@@ -20,10 +20,10 @@ const tipo = [
   { value: "Reporte de Garantia", label: "Reporte de Garantia" },
   {
     value: "Solicitud de Entrega de Vivienda",
-    label: "Solicitud de Entrega de Vivienda"
+    label: "Solicitud de Entrega de Vivienda",
   },
   { value: "Sugerencia", label: "Sugerencia" },
-  { value: "Informacion", label: "Informacion" }
+  { value: "Informacion", label: "Informacion" },
 ];
 
 const MySwal = withReactContent(Swal);
@@ -33,32 +33,32 @@ const columnsRACS = [
     title: "Tipo",
     field: "tipo",
     align: "center",
-    width: 160
+    width: 160,
   },
   {
     title: "Categoria",
     field: "categoria",
     align: "center",
-    width: 180
+    width: 180,
   },
   {
     title: "Especificacion",
     field: "especificacion",
     align: "center",
-    width: 180
+    width: 180,
   },
   {
     title: "Detalle",
     field: "detalle",
     align: "left",
-    width: 610
-  }
+    width: 610,
+  },
 ];
 
 const options = {
   movableRows: false,
   pagination: "local",
-  paginationSize: 10
+  paginationSize: 10,
 };
 
 const customStyles = {
@@ -70,23 +70,23 @@ const customStyles = {
     boxShadow: state.isFocused ? "0 0 0 0.2rem rgba(192, 3, 39, 0.25)" : 0,
     borderColor: state.isFocused ? brandColor : base.borderColor,
     "&:hover": {
-      borderColor: state.isFocused ? brandColor : base.borderColor
+      borderColor: state.isFocused ? brandColor : base.borderColor,
     },
     "&:active": {
-      borderColor: state.isFocused ? brandColor : base.borderColor
-    }
-  })
+      borderColor: state.isFocused ? brandColor : base.borderColor,
+    },
+  }),
 };
 
-const theme = theme => ({
+const theme = (theme) => ({
   ...theme,
   colors: {
     ...theme.colors,
     primary25: "rgba(192,3,39,.2)",
     primary50: "rgba(192,3,39,.2)",
     primary75: "rgba(192,3,39,.2)",
-    primary: "rgba(192,3,39,.8)"
-  }
+    primary: "rgba(192,3,39,.8)",
+  },
 });
 
 class EditarRAC extends Component {
@@ -141,7 +141,7 @@ class EditarRAC extends Component {
       racs: this.props.data[0].racs,
       clave_reporte: this.props.data[0].clave_reporte,
       reportesRACS: [],
-      estatusRAC: this.props.data[0].status
+      estatusRAC: this.props.data[0].status,
     };
   }
 
@@ -155,28 +155,28 @@ class EditarRAC extends Component {
           this.props.data[0].racs === null ||
           this.props.data[0].racs === undefined
             ? []
-            : JSON.parse(this.props.data[0].racs)
+            : JSON.parse(this.props.data[0].racs),
       });
     }
   }
   handleChange(e) {
     this.setState({
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value,
     });
   }
 
-  handleChangeTipo = e => {
+  handleChangeTipo = (e) => {
     this.setState({
       categorias: [],
       categoria: "",
       especificacion: "",
-      especificaciones: []
+      especificaciones: [],
     });
 
     try {
       this.setState({ tipo: e.label }, async () => {
         this.setState({
-          categorias: await this.API_CCS.getTip2(this.state.tipo)
+          categorias: await this.API_CCS.getTip2(this.state.tipo),
         });
       });
     } catch (err) {
@@ -185,20 +185,20 @@ class EditarRAC extends Component {
           categorias: [],
           categoria: "",
           especificacion: "",
-          especificaciones: []
+          especificaciones: [],
         });
       });
     }
   };
 
-  handleChangeCategoria = e => {
+  handleChangeCategoria = (e) => {
     try {
       this.setState({ categoria: e.label }, async () => {
         this.setState({
           especificaciones: await this.API_CCS.getTip3(
             this.state.tipo,
             this.state.categoria
-          )
+          ),
         });
       });
     } catch (err) {
@@ -209,7 +209,7 @@ class EditarRAC extends Component {
     }
   };
 
-  handleChangeEspecificaciones = e => {
+  handleChangeEspecificaciones = (e) => {
     try {
       this.setState({ especificacion: e.label }, async () => {});
     } catch (err) {
@@ -217,7 +217,7 @@ class EditarRAC extends Component {
     }
   };
 
-  campos = async ticket => {
+  campos = async (ticket) => {
     const json = await this.API_CCS.getTicketCorreo(ticket);
 
     var obj = json[0];
@@ -292,14 +292,14 @@ class EditarRAC extends Component {
 
     if (this.props.function === "desarrollos") {
       this.API_CCS.updateRACDesarrollo(this.state)
-        .then(res => {
+        .then((res) => {
           if (res.sucess === true) {
             MySwal.fire({
               title: "Correcto",
               text: "Llamada Guardada Correctamente!",
               type: "success",
               confirmButtonColor: "#C00327",
-              allowOutsideClick: false
+              allowOutsideClick: false,
             });
             this.setState({ selectedLead: null });
             this.setState({ isSaving: false });
@@ -311,25 +311,25 @@ class EditarRAC extends Component {
                 "Ocurrio un error al guardar el registro, por favor intenta de nuevo",
               type: "error",
               confirmButtonColor: "#C00327",
-              allowOutsideClick: true
+              allowOutsideClick: true,
             });
             this.setState({ isSaving: false });
           }
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
           this.setState({ isSaving: false });
         });
     } else {
       this.API_CCS.updateRAC(this.state)
-        .then(res => {
+        .then((res) => {
           if (res.sucess === true) {
             MySwal.fire({
               title: "Correcto",
               text: "Llamada Guardada Correctamente!",
               type: "success",
               confirmButtonColor: "#C00327",
-              allowOutsideClick: false
+              allowOutsideClick: false,
             });
             this.setState({ selectedLead: null });
             this.setState({ isSaving: false });
@@ -341,12 +341,12 @@ class EditarRAC extends Component {
                 "Ocurrio un error al guardar el registro, por favor intenta de nuevo",
               type: "error",
               confirmButtonColor: "#C00327",
-              allowOutsideClick: true
+              allowOutsideClick: true,
             });
             this.setState({ isSaving: false });
           }
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
           this.setState({ isSaving: false });
         });
@@ -362,7 +362,7 @@ class EditarRAC extends Component {
       tipo: this.state.tipo,
       categoria: this.state.categoria,
       especificacion: this.state.especificacion,
-      detalle: this.state.detalle
+      detalle: this.state.detalle,
     };
 
     reportes.push(nuevo);
@@ -373,7 +373,7 @@ class EditarRAC extends Component {
       tipo: "",
       categoria: "",
       especificacion: "",
-      detalle: ""
+      detalle: "",
     });
   }
 
@@ -394,7 +394,7 @@ class EditarRAC extends Component {
       manzana: this.state.manzana,
       lote: this.state.lote,
       interior: this.state.interior,
-      racs: this.state.racs
+      racs: this.state.racs,
     };
     if (this.state.racs === undefined) {
       MySwal.fire({
@@ -402,12 +402,12 @@ class EditarRAC extends Component {
         text: "Debes agregar al menos un reporte",
         type: "error",
         confirmButtonColor: "#C00327",
-        allowOutsideClick: true
+        allowOutsideClick: true,
       });
       this.setState({ isSaving: false });
     } else {
       this.API_CCS.insertRAC(ticket)
-        .then(async res => {
+        .then(async (res) => {
           if (res.sucess === true) {
             MySwal.fire({
               title: "¡Correcto!",
@@ -418,7 +418,7 @@ class EditarRAC extends Component {
               type: "success",
               confirmButtonText: "OK",
               confirmButtonColor: "#C00327",
-              allowOutsideClick: false
+              allowOutsideClick: false,
             });
             //var now = new Date();
             // var curDate = now.toLocaleString("es-MX", {
@@ -428,13 +428,13 @@ class EditarRAC extends Component {
             var CUU =
               "ralvarez@atlasdesarrollos.com,pgutierrez@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com,rcorral@atlasdesarrollos.com,lortega@atlasdesarrollos.com,rbustillos@atlasdesarrollos.com,hmulia@atlasdesarrollos.com,asahagun@atlasdesarrollos.com,gvargas@atlasdesarrollos.com,ihuerta@atlasdesarrollos.com,cvargas@atlasdesarrollos.com";
             var MTY =
-              "ralvarez@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com,rvarela@atlasdesarrollos.com,msalas@atlasdesarrollos.com,aguzman@atlasdesarrollos.com,gserna@atlasdesarrollos.com,lcharles@atlasdesarrollos.com,jcharles@atlasdesarrollos.com,jhernandez@atlasdesarrollos.com";
+              "ralvarez@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com,rvarela@atlasdesarrollos.com,msalas@atlasdesarrollos.com,aguzman@atlasdesarrollos.com,gserna@atlasdesarrollos.com,lcharles@atlasdesarrollos.com,jhernandez@atlasdesarrollos.com";
             var QRO =
-              "areyes@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com,agaitan@atlasdesarrollos.com,dmartinez@atlasdesarrollos.com,jsalcedo@atlasdesarrollos.com,gramos@atlasdesarrollos.com,lmartinez1@atlasdesarrollos.com,acruz@atlasdesarrollos.com,amaldonado@atlasdesarrollos.com,fperez@atlasdesarrollos.com,ssoto@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,jchavez@atlasdesarrollos.com,jdelgado@atlasdesarrollos.com,vsenteno@atlasdesarrollos.com,bbarrera@atlasdesarrollos.com,mortega@atlasdesarrollos.com";
+              "laguila@atlasdesarrollos.com,gvillagran@atlasdesarrollos.com,areyes@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com,dmartinez@atlasdesarrollos.com,jsalcedo@atlasdesarrollos.com,gramos@atlasdesarrollos.com,lmartinez1@atlasdesarrollos.com,acruz@atlasdesarrollos.com,amaldonado@atlasdesarrollos.com,ssoto@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,jchavez@atlasdesarrollos.com,jdelgado@atlasdesarrollos.com,vsenteno@atlasdesarrollos.com,bbarrera@atlasdesarrollos.com,mortega@atlasdesarrollos.com,";
             var TRC =
-              "ralvarez@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com,cnavarro@atlasdesarrollos.com,fcordova@atlasdesarrollos.com";
+              "ralvarez@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com,cnavarro@atlasdesarrollos.com";
             var CDMX =
-              "ralvarez@atlasdesarrollos.com,storres@atlasdesarrollos.com,evergara@atlasdesarrollos.com,acastro@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com";
+              "agalarza@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,acastro@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com";
             var AGS =
               "isaac.contreras@ccscontactcenter.com, iacontrerasg@icloud.com, brenda.hernandez@ccscontactcenter.com";
             var SJO =
@@ -458,7 +458,7 @@ class EditarRAC extends Component {
             } else {
               listaDistribucion = "isaac.contreras@ccscontactcenter.com";
             }
-         
+
             var bodynew =
               `<!DOCTYPE HTML PUBLIC '-//W3C//DTD XHTML 1.0 Transitional //EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
                 <html xmlns='http://www.w3.org/1999/xhtml' xmlns:v='urn:schemas-microsoft-com:vml' xmlns:o='urn:schemas-microsoft-com:office:office'>
@@ -909,15 +909,15 @@ class EditarRAC extends Component {
             var datitos = {
               to: listaDistribucion,
               subject: "Nuevo Reporte Levantado",
-              body: bodynew
+              body: bodynew,
             };
 
             this.API_CCS.sendMail(datitos)
-              .then(res => {
+              .then((res) => {
                 console.log("Enviado OK");
               })
 
-              .catch(err => {
+              .catch((err) => {
                 console.log("Correo no Enviado");
               });
 
@@ -932,12 +932,12 @@ class EditarRAC extends Component {
                 "Ocurrio un error al guardar el registro, por favor intenta de nuevo",
               type: "error",
               confirmButtonColor: "#C00327",
-              allowOutsideClick: true
+              allowOutsideClick: true,
             });
             this.setState({ isSaving: false });
           }
         })
-        .catch(err => {
+        .catch((err) => {
           console.log(err);
           this.setState({ isSaving: false });
         });
@@ -948,14 +948,14 @@ class EditarRAC extends Component {
     e.preventDefault();
 
     this.API_CCS.updateCliente(this.state)
-      .then(res => {
+      .then((res) => {
         if (res.sucess === true) {
           MySwal.fire({
             title: "Correcto",
             text: "Cliente Actualizado Correctamente!",
             type: "success",
             confirmButtonColor: "#C00327",
-            allowOutsideClick: false
+            allowOutsideClick: false,
           });
           this.setState({ selectedLead: null });
           this.setState({ isSaving: false });
@@ -966,12 +966,12 @@ class EditarRAC extends Component {
               "Ocurrio un error al guardar el registro, por favor intenta de nuevo",
             type: "error",
             confirmButtonColor: "#C00327",
-            allowOutsideClick: true
+            allowOutsideClick: true,
           });
           this.setState({ isSaving: false });
         }
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
         this.setState({ isSaving: false });
       });
@@ -985,7 +985,7 @@ class EditarRAC extends Component {
             height: "340px",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <div>
@@ -1153,13 +1153,21 @@ class EditarRAC extends Component {
                     <option value="PUERTA REAL TRC">PUERTA REAL TRC</option>
                     <option value="PUERTA SAVONA CUU">PUERTA SAVONA CUU</option>
                     <option value="PUERTA VERONA QRO">PUERTA VERONA QRO</option>
-                    <option value="ROMANA PASEO SICILIA QTO">ROMANA PASEO SICILIA QTO</option>
+                    <option value="ROMANA PASEO SICILIA QTO">
+                      ROMANA PASEO SICILIA QTO
+                    </option>
                     <option value="SANTA LUCIA CUU">SANTA LUCIA CUU</option>
                     <option value="SANTA LUCIA QRO">SANTA LUCIA QRO</option>
                     <option value="SANTORINI QRO">SANTORINI QRO</option>
-                    <option value="SONTERRA VILLA NAPOLES II QTO">SONTERRA VILLA NAPOLES II QTO</option>
-                    <option value="SONTERRA VILLA NAPOLES III QTO">SONTERRA VILLA NAPOLES III QTO</option>
-                    <option value="SONTERRA VILLA NAPOLES QTO">SONTERRA VILLA NAPOLES QTO</option>
+                    <option value="SONTERRA VILLA NAPOLES II QTO">
+                      SONTERRA VILLA NAPOLES II QTO
+                    </option>
+                    <option value="SONTERRA VILLA NAPOLES III QTO">
+                      SONTERRA VILLA NAPOLES III QTO
+                    </option>
+                    <option value="SONTERRA VILLA NAPOLES QTO">
+                      SONTERRA VILLA NAPOLES QTO
+                    </option>
                     <option value="VILLA BRESCIA QRO">VILLA BRESCIA QRO</option>
                     <option value="VILLA CAPRI AGS">VILLA CAPRI AGS</option>
                     <option value="VILLA CAPRI QTO">VILLA CAPRI QTO</option>
@@ -1168,21 +1176,35 @@ class EditarRAC extends Component {
                     <option value="VILLA FERRARA">VILLA FERRARA</option>
                     <option value="VILLA LORETO CUU">VILLA LORETO CUU</option>
                     <option value="VILLA NAPOLES CUU">VILLA NAPOLES CUU</option>
-                    <option value="VILLA NAPOLES IV QTO">VILLA NAPOLES IV QTO</option>
-                    <option value="VILLA NAPOLES V QRO">VILLA NAPOLES V QRO</option>
+                    <option value="VILLA NAPOLES IV QTO">
+                      VILLA NAPOLES IV QTO
+                    </option>
+                    <option value="VILLA NAPOLES V QRO">
+                      VILLA NAPOLES V QRO
+                    </option>
                     <option value="VILLA ROMANA QRO">VILLA ROMANA QRO</option>
                     <option value="VILLA ROMANA TRC">VILLA ROMANA TRC</option>
-                    <option value="VILLA SAN LORENZO I CUU">VILLA SAN LORENZO I CUU</option>
-                    <option value="VILLA SAN LORENZO III,IV CUU">VILLA SAN LORENZO III,IV CUU</option>
-                    <option value="VILLA SAN LORENZO QTO">VILLA SAN LORENZO QTO </option>
-                    <option value="VILLA SAN LORENZO V CUU">VILLA SAN LORENZO V CUU</option>
+                    <option value="VILLA SAN LORENZO I CUU">
+                      VILLA SAN LORENZO I CUU
+                    </option>
+                    <option value="VILLA SAN LORENZO III,IV CUU">
+                      VILLA SAN LORENZO III,IV CUU
+                    </option>
+                    <option value="VILLA SAN LORENZO QTO">
+                      VILLA SAN LORENZO QTO{" "}
+                    </option>
+                    <option value="VILLA SAN LORENZO V CUU">
+                      VILLA SAN LORENZO V CUU
+                    </option>
                     <option value="VILLA TOLEDO QRO">VILLA TOLEDO QRO</option>
                     <option value="VILLA TOSCANA CUU">VILLA TOSCANA CUU</option>
                     <option value="VILLA TOSCANA QTO">VILLA TOSCANA QTO</option>
                     <option value="VILLA TOSCANA TRC">VILLA TOSCANA TRC</option>
                     <option value="VILLA VENETTO AGS">VILLA VENETTO AGS</option>
                     <option value="VILLA VENETTO QTO">VILLA VENETTO QTO</option>
-                    <option value="VILLAS SANTORINI TRC">VILLAS SANTORINI TRC</option>
+                    <option value="VILLAS SANTORINI TRC">
+                      VILLAS SANTORINI TRC
+                    </option>
                     <option value="ZAKIA CELESTE QRO">ZAKIA CELESTE QRO</option>
                     <option value="ZIBATA QRO">ZIBATA QRO</option>
                     <option value="FERRARA MTY">FERRARA MTY</option>
@@ -1224,7 +1246,9 @@ class EditarRAC extends Component {
                     <option value="CERRADA CEIBA">CERRADA CEIBA</option>
                     <option value="CERRADA FERROVIA">CERRADA FERROVIA</option>
                     <option value="CERRADA FIORELO">CERRADA FIORELO</option>
-                    <option value="CERRADA FIORELO QRO">CERRADA FIORELO QRO</option>
+                    <option value="CERRADA FIORELO QRO">
+                      CERRADA FIORELO QRO
+                    </option>
                     <option value="CERRADA FRANCESCO">CERRADA FRANCESCO</option>
                     <option value="CERRADA GARIBALDI">CERRADA GARIBALDI</option>
                     <option value="CERRADA NUOVO QRO">CERRADA NUOVO QRO</option>
@@ -1248,7 +1272,9 @@ class EditarRAC extends Component {
                     <option value="MONTICELLO I, II">MONTICELLO I, II</option>
                     <option value="MONTICELLO II CUU">MONTICELLO II CUU</option>
                     <option value="MONTICELLO III">MONTICELLO III</option>
-                    <option value="MONTICELLO III CUU">MONTICELLO III CUU</option>
+                    <option value="MONTICELLO III CUU">
+                      MONTICELLO III CUU
+                    </option>
                     <option value="MONTICELLO IV MTY">MONTICELLO IV MTY</option>
                     <option value="MONTICELLO V MTY">MONTICELLO V MTY</option>
                     <option value="MONTICELLO VI MTY">MONTICELLO VI MTY</option>
@@ -1281,7 +1307,9 @@ class EditarRAC extends Component {
                     <option value="PASEO LOS ENCINOS">PASEO LOS ENCINOS</option>
                     <option value="PASEO LOS NOGALES">PASEO LOS NOGALES</option>
                     <option value="PASEO LOS OLIVOS">PASEO LOS OLIVOS</option>
-                    <option value="PASEO MIGUEL ANGEL">PASEO MIGUEL ANGEL</option>
+                    <option value="PASEO MIGUEL ANGEL">
+                      PASEO MIGUEL ANGEL
+                    </option>
                     <option value="PASEO ORLEANS">PASEO ORLEANS</option>
                     <option value="PASEO SABOYA">PASEO SABOYA</option>
                     <option value="PASEO SAN RAFAEL">PASEO SAN RAFAEL</option>
@@ -1294,9 +1322,13 @@ class EditarRAC extends Component {
                     <option value="PRIVADA COLISEO">PRIVADA COLISEO</option>
                     <option value="PRIVADA DEL CORSO">PRIVADA DEL CORSO</option>
                     <option value="PRIVADA NAVONA">PRIVADA NAVONA</option>
-                    <option value="PROVENZA CASSIS QRO">PROVENZA CASSIS QRO</option>
+                    <option value="PROVENZA CASSIS QRO">
+                      PROVENZA CASSIS QRO
+                    </option>
                     <option value="PROVENZA NIZA QRO">PROVENZA NIZA QRO</option>
-                    <option value="PUERTA SANTUARIO CUU">PUERTA SANTUARIO CUU</option>
+                    <option value="PUERTA SANTUARIO CUU">
+                      PUERTA SANTUARIO CUU
+                    </option>
                     <option value="SABORA BASSA">SABORA BASSA</option>
                     <option value="SAN LORENZO III">SAN LORENZO III</option>
                     <option value="SAN LORENZO IV">SAN LORENZO IV</option>
@@ -1360,8 +1392,12 @@ class EditarRAC extends Component {
                     <option value="AMALFI B">AMALFI B</option>
                     <option value="BARTOLI A">BARTOLI A</option>
                     <option value="BELLINI A 122 M2">BELLINI A 122 M2</option>
-                    <option value="BELLINI A C/PASILLO INT">BELLINI A C/PASILLO INT</option>
-                    <option value="BELLINI B C/PASILLO INT">BELLINI B C/PASILLO INT</option>
+                    <option value="BELLINI A C/PASILLO INT">
+                      BELLINI A C/PASILLO INT
+                    </option>
+                    <option value="BELLINI B C/PASILLO INT">
+                      BELLINI B C/PASILLO INT
+                    </option>
                     <option value="BERNINI 82 A">BERNINI 82 A</option>
                     <option value="BERNINI A">BERNINI A</option>
                     <option value="BERNINI A UM">BERNINI A UM</option>
@@ -1370,7 +1406,9 @@ class EditarRAC extends Component {
                     <option value="BLU A">BLU A</option>
                     <option value="BORGHESE A">BORGHESE A</option>
                     <option value="BORGHESE ESQ 2">BORGHESE ESQ 2</option>
-                    <option value="BORGHESE ESQUINERA">BORGHESE ESQUINERA</option>
+                    <option value="BORGHESE ESQUINERA">
+                      BORGHESE ESQUINERA
+                    </option>
                     <option value="BORGHESE MED A">BORGHESE MED A</option>
                     <option value="BORGHESE MED C">BORGHESE MED C</option>
                     <option value="BORGHESE MED D">BORGHESE MED D</option>
@@ -1378,7 +1416,9 @@ class EditarRAC extends Component {
                     <option value="BORGHESE MED. B">BORGHESE MED. B</option>
                     <option value="BORGHESE MED. C">BORGHESE MED. C</option>
                     <option value="BORGHESE MED. D">BORGHESE MED. D</option>
-                    <option value="BORGIA  MED. C 119 M2">BORGIA MED. C 119 M2</option>
+                    <option value="BORGIA  MED. C 119 M2">
+                      BORGIA MED. C 119 M2
+                    </option>
                     <option value="BORGIA (BOA)">BORGIA (BOA)</option>
                     <option value="BORGIA A">BORGIA A</option>
                     <option value="BORGIA B">BORGIA B</option>
@@ -1386,13 +1426,28 @@ class EditarRAC extends Component {
                     <option value="BORGIA CP">BORGIA CP</option>
                     <option value="BORGIA D">BORGIA D</option>
                     <option value="BORGIA ESQ">BORGIA ESQ</option>
-                    <option value="BORGIA ESQ.2 119 M2">BORGIA ESQ.2 119 M2</option>
-                    <option value="BORGIA ESQ2 119 M2">BORGIA ESQ2 119 M2</option>
-                    <option value="BORGIA MED A 119 M2">BORGIA MED A 119 M2</option>
-                    <option value="BORGIA MED B 119 M2">BORGIA MED B 119 M2</option>
-                    <option value="BORGIA MED C 119 M2">BORGIA MED C 119 M2</option>
-                    <option value="BORGIA MED. A 119 M2">BORGIA MED. A 119 M2 </option>
-                    <option value="BORGIA MED. B 119 M2"> BORGIA MED. B 119 M2</option>
+                    <option value="BORGIA ESQ.2 119 M2">
+                      BORGIA ESQ.2 119 M2
+                    </option>
+                    <option value="BORGIA ESQ2 119 M2">
+                      BORGIA ESQ2 119 M2
+                    </option>
+                    <option value="BORGIA MED A 119 M2">
+                      BORGIA MED A 119 M2
+                    </option>
+                    <option value="BORGIA MED B 119 M2">
+                      BORGIA MED B 119 M2
+                    </option>
+                    <option value="BORGIA MED C 119 M2">
+                      BORGIA MED C 119 M2
+                    </option>
+                    <option value="BORGIA MED. A 119 M2">
+                      BORGIA MED. A 119 M2{" "}
+                    </option>
+                    <option value="BORGIA MED. B 119 M2">
+                      {" "}
+                      BORGIA MED. B 119 M2
+                    </option>
                     <option value="BORGIA SP">BORGIA SP</option>
                     <option value="BORGUESE">BORGUESE</option>
                     <option value="BOTICELLI">BOTICELLI</option>
@@ -1406,7 +1461,9 @@ class EditarRAC extends Component {
                     <option value="CAPRI MTY">CAPRI MTY</option>
                     <option value="CELESTE A">CELESTE A</option>
                     <option value="CELESTE B">CELESTE B</option>
-                    <option value="CERRADA FIORELO QRO">CERRADA FIORELO QRO</option>
+                    <option value="CERRADA FIORELO QRO">
+                      CERRADA FIORELO QRO
+                    </option>
                     <option value="CHAMBORD">CHAMBORD</option>
                     <option value="CHAMBORD A">CHAMBORD A</option>
                     <option value="DAVINCI A">DAVINCI A</option>
@@ -1419,12 +1476,21 @@ class EditarRAC extends Component {
                     <option value="DORATO A">DORATO A</option>
                     <option value="DORATO B">DORATO B</option>
                     <option value="FARINELLI A">FARINELLI A</option>
-                    <option value="FARINELLI A 137 M2">FARINELLI A 137 M2</option>
+                    <option value="FARINELLI A 137 M2">
+                      FARINELLI A 137 M2
+                    </option>
                     <option value="FARINELLI B">FARINELLI B</option>
-                    <option value="FARINELLI B 137 M2">FARINELLI B 137 M2</option>
+                    <option value="FARINELLI B 137 M2">
+                      FARINELLI B 137 M2
+                    </option>
                     <option value="FARINELLI C">FARINELLI C</option>
-                    <option value="FARINELLI C 137 M2">FARINELLI C 137 M2</option>
-                    <option value="FARINELLI ESQ 137 M2"> FARINELLI ESQ 137 M2</option>
+                    <option value="FARINELLI C 137 M2">
+                      FARINELLI C 137 M2
+                    </option>
+                    <option value="FARINELLI ESQ 137 M2">
+                      {" "}
+                      FARINELLI ESQ 137 M2
+                    </option>
                     <option value="FELINI A">FELINI A</option>
                     <option value="FELINI B">FELINI B</option>
                     <option value="FELLINI A">FELLINI A</option>
@@ -1468,32 +1534,64 @@ class EditarRAC extends Component {
                     <option value="MARRONE A">MARRONE A</option>
                     <option value="MARSELLA">MARSELLA</option>
                     <option value="MARSELLA A MTY">MARSELLA A MTY</option>
-                    <option value="MARSELLA A ROOF TOP MTY">MARSELLA A ROOF TOP MTY</option>
+                    <option value="MARSELLA A ROOF TOP MTY">
+                      MARSELLA A ROOF TOP MTY
+                    </option>
                     <option value="MARSELLA B">MARSELLA B</option>
-                    <option value="MARSELLA B ROOF TOP MTY">MARSELLA B ROOF TOP MTY</option>
+                    <option value="MARSELLA B ROOF TOP MTY">
+                      MARSELLA B ROOF TOP MTY
+                    </option>
                     <option value="MEDICCI D">MEDICCI D</option>
-                    <option value="MEDICCI ESQUINERA 1 159 M2">MEDICCI ESQUINERA 1 159 M2</option>
-                    <option value="MEDICCI ESQUINERA 2 159 M2">MEDICCI ESQUINERA 2 159 M2</option>
-                    <option value="MEDICCI ESQUINERA 2 163 M2">MEDICCI ESQUINERA 2 163 M2</option>
+                    <option value="MEDICCI ESQUINERA 1 159 M2">
+                      MEDICCI ESQUINERA 1 159 M2
+                    </option>
+                    <option value="MEDICCI ESQUINERA 2 159 M2">
+                      MEDICCI ESQUINERA 2 159 M2
+                    </option>
+                    <option value="MEDICCI ESQUINERA 2 163 M2">
+                      MEDICCI ESQUINERA 2 163 M2
+                    </option>
                     <option value="MEDICI">MEDICI</option>
                     <option value="MEDICI A">MEDICI A</option>
                     <option value="MEDICI A 164 M2">MEDICI A 164 M2</option>
                     <option value="MEDICI B">MEDICI B</option>
                     <option value="MEDICI C">MEDICI C</option>
-                    <option value="MEDICI CON BALCON ESQ 2 163M2">MEDICI CON BALCON ESQ 2 163M2</option>
-                    <option value="MEDICI CON BALCON ESQ. 2 163M2">MEDICI CON BALCON ESQ. 2 163M2</option>
+                    <option value="MEDICI CON BALCON ESQ 2 163M2">
+                      MEDICI CON BALCON ESQ 2 163M2
+                    </option>
+                    <option value="MEDICI CON BALCON ESQ. 2 163M2">
+                      MEDICI CON BALCON ESQ. 2 163M2
+                    </option>
                     <option value="MEDICI D 159 M2">MEDICI D 159 M2</option>
                     <option value="MEDICI D 163 M2">MEDICI D 163 M2</option>
-                    <option value="MEDICI D 164 M2 C/CTO DE SERV">MEDICI D 164 M2 C/CTO DE SERV</option>
-                    <option value="MEDICI D CON BALCON 163 M2">MEDICI D CON BALCON 163 M2</option>
+                    <option value="MEDICI D 164 M2 C/CTO DE SERV">
+                      MEDICI D 164 M2 C/CTO DE SERV
+                    </option>
+                    <option value="MEDICI D CON BALCON 163 M2">
+                      MEDICI D CON BALCON 163 M2
+                    </option>
                     <option value="MEDICI ESQ">MEDICI ESQ</option>
-                    <option value="MEDICI ESQ 164  S/CTO DE SERV">MEDICI ESQ 164 S/CTO DE SERV</option>
-                    <option value="MEDICI ESQ 164 C/ BCON S/CTOS">MEDICI ESQ 164 C/ BCON S/CTOS</option>
-                    <option value="MEDICI ESQ1 164M C/CTO DE SERV">MEDICI ESQ1 164M C/CTO DE SERV</option>
-                    <option value="MEDICI ESQUINERA 1">MEDICI ESQUINERA 1</option>
-                    <option value="MEDICI ESQUINERA 159 M2">MEDICI ESQUINERA 159 M2</option>
-                    <option value="MEDICI ESQUINERA 164 M2">MEDICI ESQUINERA 164 M2</option>
-                    <option value="MEDICI ESQUINERA 2 163 M2">MEDICI ESQUINERA 2 163 M2</option>
+                    <option value="MEDICI ESQ 164  S/CTO DE SERV">
+                      MEDICI ESQ 164 S/CTO DE SERV
+                    </option>
+                    <option value="MEDICI ESQ 164 C/ BCON S/CTOS">
+                      MEDICI ESQ 164 C/ BCON S/CTOS
+                    </option>
+                    <option value="MEDICI ESQ1 164M C/CTO DE SERV">
+                      MEDICI ESQ1 164M C/CTO DE SERV
+                    </option>
+                    <option value="MEDICI ESQUINERA 1">
+                      MEDICI ESQUINERA 1
+                    </option>
+                    <option value="MEDICI ESQUINERA 159 M2">
+                      MEDICI ESQUINERA 159 M2
+                    </option>
+                    <option value="MEDICI ESQUINERA 164 M2">
+                      MEDICI ESQUINERA 164 M2
+                    </option>
+                    <option value="MEDICI ESQUINERA 2 163 M2">
+                      MEDICI ESQUINERA 2 163 M2
+                    </option>
                     <option value="MICHELANGELO">MICHELANGELO</option>
                     <option value="MICHELANGELO A">MICHELANGELO A</option>
                     <option value="MICHELANGELO B">MICHELANGELO B</option>
@@ -1509,9 +1607,13 @@ class EditarRAC extends Component {
                     <option value="MISTRAL B">MISTRAL B</option>
                     <option value="MISTRAL IS">MISTRAL IS</option>
                     <option value="MONTEVERDI B">MONTEVERDI B</option>
-                    <option value="MONTEVERDI ESQUINERA II">MONTEVERDI ESQUINERA II</option>
+                    <option value="MONTEVERDI ESQUINERA II">
+                      MONTEVERDI ESQUINERA II
+                    </option>
                     <option value="MYKONOS">MYKONOS</option>
-                    <option value="MYKONOS ESQUINERA 2">MYKONOS ESQUINERA 2</option>
+                    <option value="MYKONOS ESQUINERA 2">
+                      MYKONOS ESQUINERA 2
+                    </option>
                     <option value="NAPOLI A">NAPOLI A</option>
                     <option value="NAPOLI B">NAPOLI B</option>
                     <option value="NERO">NERO</option>
@@ -1528,9 +1630,15 @@ class EditarRAC extends Component {
                     <option value="ORLEANS A">ORLEANS A</option>
                     <option value="ORSINI A">ORSINI A</option>
                     <option value="ORSINI C">ORSINI C</option>
-                    <option value="ORSINI CON BALCON C">ORSINI CON BALCON C</option>
-                    <option value="ORSINI CON BALCON D">ORSINI CON BALCON D</option>
-                    <option value="ORSINI CON BALCON ESQUINERA">ORSINI CON BALCON ESQUINERA</option>
+                    <option value="ORSINI CON BALCON C">
+                      ORSINI CON BALCON C
+                    </option>
+                    <option value="ORSINI CON BALCON D">
+                      ORSINI CON BALCON D
+                    </option>
+                    <option value="ORSINI CON BALCON ESQUINERA">
+                      ORSINI CON BALCON ESQUINERA
+                    </option>
                     <option value="ORSINI D">ORSINI D</option>
                     <option value="ORSINI ESQUINERA">ORSINI ESQUINERA</option>
                     <option value="PISA A">PISA A</option>
@@ -1543,7 +1651,9 @@ class EditarRAC extends Component {
                     <option value="PRADO A 114">PRADO A 114</option>
                     <option value="PRADO B">PRADO B</option>
                     <option value="PRADO B 114">PRADO B 114</option>
-                    <option value="PROTOTIPO POR DEFINIRSE">PROTOTIPO POR DEFINIRSE</option>
+                    <option value="PROTOTIPO POR DEFINIRSE">
+                      PROTOTIPO POR DEFINIRSE
+                    </option>
                     <option value="PUCCINI ESQ">PUCCINI ESQ</option>
                     <option value="PUCCINI TIPO A">PUCCINI TIPO A</option>
                     <option value="PUCCINI TIPO B">PUCCINI TIPO B</option>
@@ -1576,8 +1686,12 @@ class EditarRAC extends Component {
                     <option value="VERSALLES B">VERSALLES B</option>
                     <option value="VERSALLES C">VERSALLES C</option>
                     <option value="VERSALLES D">VERSALLES D</option>
-                    <option value="VERSALLES ESQUINERA">VERSALLES ESQUINERA</option>
-                    <option value="VERSALLES ESQUINERA 2">VERSALLES ESQUINERA 2</option>
+                    <option value="VERSALLES ESQUINERA">
+                      VERSALLES ESQUINERA
+                    </option>
+                    <option value="VERSALLES ESQUINERA 2">
+                      VERSALLES ESQUINERA 2
+                    </option>
                     <option value="VERSALLES F">VERSALLES F</option>
                     <option value="VERSALLES MOD A">VERSALLES MOD A</option>
                     <option value="VERSALLES MOD B">VERSALLES MOD B</option>
@@ -1587,23 +1701,43 @@ class EditarRAC extends Component {
                     <option value="VILLANOVA A">VILLANOVA A</option>
                     <option value="VILLANOVA B">VILLANOVA B</option>
                     <option value="VILLANOVA PLU">VILLANOVA PLU</option>
-                    <option value="VILLANOVA PLU 64 A">VILLANOVA PLU 64 A</option>
-                    <option value="VILLANOVA PLU 64 B">VILLANOVA PLU 64 B</option>
-                    <option value="VILLANOVA PLU 73 A">VILLANOVA PLU 73 A</option>
-                    <option value="VILLANOVA PLU 73 B">VILLANOVA PLU 73 B</option>
+                    <option value="VILLANOVA PLU 64 A">
+                      VILLANOVA PLU 64 A
+                    </option>
+                    <option value="VILLANOVA PLU 64 B">
+                      VILLANOVA PLU 64 B
+                    </option>
+                    <option value="VILLANOVA PLU 73 A">
+                      VILLANOVA PLU 73 A
+                    </option>
+                    <option value="VILLANOVA PLU 73 B">
+                      VILLANOVA PLU 73 B
+                    </option>
                     <option value="VILLANOVA UNI">VILLANOVA UNI</option>
                     <option value="VILLANOVA UNI 73">VILLANOVA UNI 73</option>
-                    <option value="VILLANOVA UNI 73 A">VILLANOVA UNI 73 A</option>
-                    <option value="VILLANOVA UNI 73 B">VILLANOVA UNI 73 B</option>
-                    <option value="VILLANOVA UNI 73 C">VILLANOVA UNI 73 C</option>
+                    <option value="VILLANOVA UNI 73 A">
+                      VILLANOVA UNI 73 A
+                    </option>
+                    <option value="VILLANOVA UNI 73 B">
+                      VILLANOVA UNI 73 B
+                    </option>
+                    <option value="VILLANOVA UNI 73 C">
+                      VILLANOVA UNI 73 C
+                    </option>
                     <option value="VIOLA A">VIOLA A</option>
                     <option value="VIOLA C">VIOLA C</option>
                     <option value="VISCONTI">VISCONTI</option>
                     <option value="VISCONTI C">VISCONTI C</option>
                     <option value="VISCONTI D">VISCONTI D</option>
-                    <option value="VISCONTI ESQUINERA 2">VISCONTI ESQUINERA 2</option>
-                    <option value="VISCONTI ESQUINERA 3">VISCONTI ESQUINERA 3</option>
-                    <option value="VISCONTI ESQUINERA 4">VISCONTI ESQUINERA 4</option>
+                    <option value="VISCONTI ESQUINERA 2">
+                      VISCONTI ESQUINERA 2
+                    </option>
+                    <option value="VISCONTI ESQUINERA 3">
+                      VISCONTI ESQUINERA 3
+                    </option>
+                    <option value="VISCONTI ESQUINERA 4">
+                      VISCONTI ESQUINERA 4
+                    </option>
                     <option value="VIVALDI">VIVALDI</option>
                     <option value="VIVALDI A 215 M2">VIVALDI A 215 M2</option>
                     <option value="VIVALDI A 217 M2">VIVALDI A 217 M2</option>
@@ -1839,7 +1973,7 @@ class EditarRAC extends Component {
               <Row>
                 <Col>
                   <ReactTabulator
-                    ref={ref => (this.ref = ref)}
+                    ref={(ref) => (this.ref = ref)}
                     rowClick={this.rowClick}
                     index={"racsAsi"}
                     data={this.state.reportesRACS}
@@ -1971,7 +2105,7 @@ class EditarRAC extends Component {
                             ? null
                             : {
                                 label: this.state.tipo,
-                                value: this.state.tipo
+                                value: this.state.tipo,
                               }
                         }
                       />
@@ -2000,7 +2134,7 @@ class EditarRAC extends Component {
                             ? null
                             : {
                                 label: this.state.categoria,
-                                value: this.state.categoria
+                                value: this.state.categoria,
                               }
                         }
                       />
@@ -2030,7 +2164,7 @@ class EditarRAC extends Component {
                             ? null
                             : {
                                 label: this.state.especificacion,
-                                value: this.state.especificacion
+                                value: this.state.especificacion,
                               }
                         }
                       />
@@ -2038,7 +2172,7 @@ class EditarRAC extends Component {
                       <input
                         tabIndex={-1}
                         style={{ opacity: 0, height: 0 }}
-                        onChange={e => {}}
+                        onChange={(e) => {}}
                         value={this.state.especificacion}
                         required
                       />
@@ -2073,7 +2207,7 @@ class EditarRAC extends Component {
                 <Row>
                   <Col>
                     <ReactTabulator
-                      ref={ref => (this.ref = ref)}
+                      ref={(ref) => (this.ref = ref)}
                       rowClick={this.rowClick}
                       index={"racsAsi"}
                       data={this.state.reportesAgregados}
@@ -2114,7 +2248,7 @@ class EditarRAC extends Component {
               <Row>
                 <Col>
                   <ReactTabulator
-                    ref={ref => (this.ref = ref)}
+                    ref={(ref) => (this.ref = ref)}
                     rowClick={this.rowClick}
                     index={"racsAsi"}
                     data={this.state.reportesRACS}
