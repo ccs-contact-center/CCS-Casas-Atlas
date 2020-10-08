@@ -1210,6 +1210,7 @@ class EditarRAC extends Component {
                     <option value="FERRARA MTY">FERRARA MTY</option>
                     <option value="AMARELLO QRO">AMARELLO QRO</option>
                     <option value="VARENNA QRO">VARENNA QRO</option>
+                    <option value="BOREAL CUU">BOREAL CUU</option>
                   </Input>
                 </FormGroup>
               </Col>
@@ -1352,8 +1353,10 @@ class EditarRAC extends Component {
                     <option value="VARENNA QRO">VARENNA QRO</option>
                     <option value="Cerrada Victoria">Cerrada Victoria</option>
                     <option value="PROVENZA ARLES">PROVENZA ARLES</option>
-                    <option value="PROVENZA AVIÃ‘ON">PROVENZA AVIÃ‘ON</option>
+                    <option value="PROVENZA AVIÑON">PROVENZA AVIÃ‘ON</option>
                     <option value="PROVENZA MARSELLA">PROVENZA MARSELLA</option>
+                    <option value="BOREAL CUU">BOREAL CUU</option>
+                    
                   </Input>
                 </FormGroup>
               </Col>
@@ -1764,6 +1767,9 @@ class EditarRAC extends Component {
                     <option value="FLORENTINO B 70">FLORENTINO B 70</option>
                     <option value="FLORENTINO A 70 ">FLORENTINO A 70 </option>
                     <option value="FLORENTINO A">FLORENTINO A</option>
+                    <option value="SIENA A">SIENA A</option>
+                    <option value="NIZA A">NIZA A</option>
+                    <option value="NIZA B">NIZA B</option>
                   </Input>
                 </FormGroup>
               </Col>
