@@ -12,7 +12,7 @@ import {
   FormGroup,
   Label,
   Input,
-  Button
+  Button,
 } from "reactstrap";
 import EditarRAC from "./Editar_RAC";
 
@@ -35,7 +35,7 @@ const columns = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 90
+    width: 90,
   },
   {
     title: "Nombres",
@@ -43,7 +43,7 @@ const columns = [
     align: "left",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 200
+    width: 200,
   },
   {
     title: "Paterno",
@@ -51,7 +51,7 @@ const columns = [
     align: "left",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 70
+    width: 70,
   },
   {
     title: "Materno",
@@ -59,7 +59,7 @@ const columns = [
     align: "left",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 70
+    width: 70,
   },
   {
     title: "Telefono 1",
@@ -67,7 +67,7 @@ const columns = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 120
+    width: 120,
   },
   {
     title: "Telefono 2",
@@ -75,7 +75,7 @@ const columns = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 120
+    width: 120,
   },
   {
     title: "Plaza",
@@ -83,7 +83,7 @@ const columns = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 130
+    width: 130,
   },
   {
     title: "Desarrollo",
@@ -91,7 +91,7 @@ const columns = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 130
+    width: 130,
   },
   {
     title: "Cerrada",
@@ -99,7 +99,7 @@ const columns = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 100
+    width: 100,
   },
   {
     title: "Mz",
@@ -107,7 +107,7 @@ const columns = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 65
+    width: 65,
   },
   {
     title: "Lt",
@@ -115,7 +115,7 @@ const columns = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 60
+    width: 60,
   },
   {
     title: "Int",
@@ -123,8 +123,8 @@ const columns = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 60
-  }
+    width: 60,
+  },
 ];
 
 const columnsRACS = [
@@ -134,7 +134,7 @@ const columnsRACS = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 120
+    width: 120,
   },
   {
     title: "Fecha Alta",
@@ -142,7 +142,7 @@ const columnsRACS = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 120
+    width: 120,
   },
   {
     title: "Contacto",
@@ -150,7 +150,7 @@ const columnsRACS = [
     align: "left",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 260
+    width: 260,
   },
   {
     title: "Titular",
@@ -158,7 +158,7 @@ const columnsRACS = [
     align: "left",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 260
+    width: 260,
   },
   {
     title: "No. Cliente",
@@ -166,7 +166,7 @@ const columnsRACS = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 120
+    width: 120,
   },
   {
     title: "Plaza",
@@ -174,7 +174,7 @@ const columnsRACS = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 120
+    width: 120,
   },
   {
     title: "Desarrollo",
@@ -182,7 +182,7 @@ const columnsRACS = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 140
+    width: 140,
   },
   {
     title: "Prototipo",
@@ -190,7 +190,7 @@ const columnsRACS = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 120
+    width: 120,
   },
   {
     title: "Cerrada",
@@ -198,7 +198,7 @@ const columnsRACS = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 100
+    width: 100,
   },
   {
     title: "Mz",
@@ -206,7 +206,7 @@ const columnsRACS = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 65
+    width: 65,
   },
   {
     title: "Lt",
@@ -214,7 +214,7 @@ const columnsRACS = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 60
+    width: 60,
   },
   {
     title: "Int",
@@ -222,14 +222,14 @@ const columnsRACS = [
     align: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
-    width: 60
-  }
+    width: 60,
+  },
 ];
 
 const options = {
   movableRows: false,
   pagination: "local",
-  paginationSize: 10
+  paginationSize: 10,
 };
 
 class Inicio extends Component {
@@ -271,7 +271,7 @@ class Inicio extends Component {
       email: "",
       estado: "",
       entrega_vivienda: "",
-      entrega_escrituras: ""
+      entrega_escrituras: "",
     };
   }
 
@@ -282,22 +282,22 @@ class Inicio extends Component {
       updateClient: false,
       searchClient: false,
       loading: true,
-      updateRAC: true
+      updateRAC: true,
     });
 
     this.API_CCS.getRAC(row.getData().clave_reporte)
-      .then(response => {
+      .then((response) => {
         return response;
       })
-      .then(json => {
+      .then((json) => {
         this.setState({ data: json });
       })
-      .then(res => {
+      .then((res) => {
         this.API_CCS.getCliente(row.getData().id_cliente)
-          .then(response => {
+          .then((response) => {
             return response;
           })
-          .then(json => {
+          .then((json) => {
             this.setState({ dataClient: json, loading: false });
           });
       });
@@ -309,18 +309,18 @@ class Inicio extends Component {
       newCLient: false,
       updateClient: true,
       searchClient: false,
-      loading: true
+      loading: true,
     });
 
     this.API_CCS.getRACSClient(row.getData().no_cliente)
-      .then(response => {
+      .then((response) => {
         return response;
       })
-      .then(json => {
+      .then((json) => {
         this.setState({ dataRACS: json });
       })
-      .then(next => {
-        this.API_CCS.getCliente(row.getData().no_cliente).then(res => {
+      .then((next) => {
+        this.API_CCS.getCliente(row.getData().no_cliente).then((res) => {
           this.setState({
             no_cliente: res[0].no_cliente,
             nombres: res[0].nombres,
@@ -345,7 +345,7 @@ class Inicio extends Component {
             email: res[0].email,
             estado: res[0].estado,
             entrega_vivienda: res[0].entrega_vivienda,
-            entrega_escrituras: res[0].entrega_escrituras
+            entrega_escrituras: res[0].entrega_escrituras,
           });
 
           this.setState({ loading: false });
@@ -359,7 +359,7 @@ class Inicio extends Component {
       newCLient: false,
       updateClient: false,
       searchClient: true,
-      loading: false
+      loading: false,
     });
   };
 
@@ -372,15 +372,13 @@ class Inicio extends Component {
       searchClient: true,
       loading: false,
       nuevoRAC: false,
-      updateRAC:false
+      updateRAC: false,
     });
   };
 
-  
-
   handleChange(e) {
     this.setState({
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value,
     });
   }
 
@@ -389,25 +387,25 @@ class Inicio extends Component {
     this.setState({
       newCLient: true,
       updateClient: false,
-      searchClient: false
+      searchClient: false,
     });
   }
 
-  newRac = e => {
+  newRac = (e) => {
     this.setState({
       client: this.state.no_cliente,
       newCLient: false,
       updateClient: false,
       searchClient: false,
       loading: true,
-      nuevoRAC: true
+      nuevoRAC: true,
     });
 
     this.API_CCS.getCliente(this.state.no_cliente)
-      .then(response => {
+      .then((response) => {
         return response;
       })
-      .then(json => {
+      .then((json) => {
         this.setState({ dataClient: json, loading: false });
       });
   };
@@ -418,14 +416,14 @@ class Inicio extends Component {
     this.setState({ isSaving: true });
 
     this.API_CCS.updateCliente(this.state)
-      .then(res => {
+      .then((res) => {
         if (res.sucess === true) {
           MySwal.fire({
             title: "Correcto",
             text: "Cliente Actualizado Correctamente!",
             type: "success",
             confirmButtonColor: "#C00327",
-            allowOutsideClick: false
+            allowOutsideClick: false,
           });
           this.updateTable();
           this.setState({ selectedLead: null });
@@ -437,12 +435,12 @@ class Inicio extends Component {
               "Ocurrio un error al guardar el registro, por favor intenta de nuevo",
             type: "error",
             confirmButtonColor: "#C00327",
-            allowOutsideClick: true
+            allowOutsideClick: true,
           });
           this.setState({ isSaving: false });
         }
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
         this.setState({ isSaving: false });
       });
@@ -450,10 +448,10 @@ class Inicio extends Component {
 
   updateTable() {
     this.API_CCS.getClientes()
-      .then(response => {
+      .then((response) => {
         return response;
       })
-      .then(json => {
+      .then((json) => {
         this.setState({ data: json });
       });
   }
@@ -470,7 +468,7 @@ class Inicio extends Component {
             height: "340px",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <div>
@@ -524,7 +522,7 @@ class Inicio extends Component {
                   height: "50vh",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}
               >
                 <div>
@@ -802,7 +800,7 @@ class Inicio extends Component {
                                 VILLA SAN LORENZO III,IV CUU
                               </option>
                               <option value="VILLA SAN LORENZO QTO">
-                                VILLA SAN LORENZO QTO
+                                VILLA SAN LORENZO QTO{" "}
                               </option>
                               <option value="VILLA SAN LORENZO V CUU">
                                 VILLA SAN LORENZO V CUU
@@ -832,6 +830,10 @@ class Inicio extends Component {
                                 ZAKIA CELESTE QRO
                               </option>
                               <option value="ZIBATA QRO">ZIBATA QRO</option>
+                              <option value="FERRARA MTY">FERRARA MTY</option>
+                              <option value="AMARELLO QRO">AMARELLO QRO</option>
+                              <option value="VARENNA QRO">VARENNA QRO</option>
+                              <option value="BOREAL CUU">BOREAL CUU</option>
                             </Input>
                           </FormGroup>
                         </Col>
@@ -1081,6 +1083,22 @@ class Inicio extends Component {
                                 VILLA TOSCANA
                               </option>
                               <option value="YOLA">YOLA</option>
+                              <option value="FERRARA I">FERRARA I</option>
+                              <option value="AMARELLO QRO">AMARELLO QRO</option>
+                              <option value="VARENNA QRO">VARENNA QRO</option>
+                              <option value="Cerrada Victoria">
+                                Cerrada Victoria
+                              </option>
+                              <option value="PROVENZA ARLES">
+                                PROVENZA ARLES
+                              </option>
+                              <option value="PROVENZA AVIÑON">
+                                PROVENZA AVIÑON
+                              </option>
+                              <option value="PROVENZA MARSELLA">
+                                PROVENZA MARSELLA
+                              </option>
+                              <option value="BOREAL CUU">BOREAL CUU</option>
                             </Input>
                           </FormGroup>
                         </Col>
@@ -1187,9 +1205,10 @@ class Inicio extends Component {
                                 BORGIA MED C 119 M2
                               </option>
                               <option value="BORGIA MED. A 119 M2">
-                                BORGIA MED. A 119 M2
+                                BORGIA MED. A 119 M2{" "}
                               </option>
                               <option value="BORGIA MED. B 119 M2">
+                                {" "}
                                 BORGIA MED. B 119 M2
                               </option>
                               <option value="BORGIA SP">BORGIA SP</option>
@@ -1234,6 +1253,7 @@ class Inicio extends Component {
                                 FARINELLI C 137 M2
                               </option>
                               <option value="FARINELLI ESQ 137 M2">
+                                {" "}
                                 FARINELLI ESQ 137 M2
                               </option>
                               <option value="FELINI A">FELINI A</option>
@@ -1575,6 +1595,39 @@ class Inicio extends Component {
                               <option value="VIVALDI B 217 M2">
                                 VIVALDI B 217 M2
                               </option>
+                              <option value="POPOTLA TIPO C">
+                                POPOTLA TIPO C
+                              </option>
+                              <option value="POPOTLA TIPO F">
+                                POPOTLA TIPO F
+                              </option>
+                              <option value="LYON A ">LYON A </option>
+                              <option value="CAPRI A">CAPRI A</option>
+                              <option value="CAPRI B">CAPRI B</option>
+                              <option value="CAPRI B">CAPRI B</option>
+                              <option value="LUCCA B">LUCCA B</option>
+                              <option value="FLORENTINO A">FLORENTINO A</option>
+                              <option value="ORLEANS B">ORLEANS B</option>
+                              <option value="MODENA B">MODENA B</option>
+                              <option value="BORA B">BORA B</option>
+                              <option value="CAPRI A">CAPRI A</option>
+                              <option value="CAPRI B">CAPRI B</option>
+                              <option value="MODENA A">MODENA A</option>
+                              <option value="LYON A ">LYON A </option>
+                              <option value="AMALIFI A">AMALIFI A</option>
+                              <option value="LYON A ">LYON A </option>
+                              <option value="BELLAGIO A">BELLAGIO A</option>
+                              <option value="NERO A">NERO A</option>
+                              <option value="FLORENTINO B 70">
+                                FLORENTINO B 70
+                              </option>
+                              <option value="FLORENTINO A 70 ">
+                                FLORENTINO A 70{" "}
+                              </option>
+                              <option value="FLORENTINO A">FLORENTINO A</option>
+                              <option value="SIENA A">SIENA A</option>
+                              <option value="NIZA A">NIZA A</option>
+                              <option value="NIZA B">NIZA B</option>
                             </Input>
                           </FormGroup>
                         </Col>
@@ -1806,7 +1859,7 @@ class Inicio extends Component {
                   height: "50vh",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}
               >
                 <div>
@@ -1830,7 +1883,7 @@ class Inicio extends Component {
                   height: "50vh",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}
               >
                 <div>
@@ -1877,7 +1930,7 @@ class Inicio extends Component {
                   height: "50vh",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}
               >
                 <div>

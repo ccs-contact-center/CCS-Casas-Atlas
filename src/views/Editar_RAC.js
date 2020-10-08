@@ -1353,7 +1353,7 @@ class EditarRAC extends Component {
                     <option value="VARENNA QRO">VARENNA QRO</option>
                     <option value="Cerrada Victoria">Cerrada Victoria</option>
                     <option value="PROVENZA ARLES">PROVENZA ARLES</option>
-                    <option value="PROVENZA AVIÑON">PROVENZA AVIÃ‘ON</option>
+                    <option value="PROVENZA AVIÑON">PROVENZA AVIÑON</option>
                     <option value="PROVENZA MARSELLA">PROVENZA MARSELLA</option>
                     <option value="BOREAL CUU">BOREAL CUU</option>
                     

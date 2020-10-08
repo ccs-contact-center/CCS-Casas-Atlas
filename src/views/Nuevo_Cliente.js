@@ -9,7 +9,7 @@ import {
   Label,
   Input,
   Form,
-  Button
+  Button,
 } from "reactstrap";
 import withAuth from "../components/withAuth";
 import API_CCS from "../components/API_CCS";
@@ -61,13 +61,13 @@ class Nuevo_Cliente extends Component {
       email: "",
       estado: "",
       entrega_vivienda: "",
-      entrega_escrituras: ""
+      entrega_escrituras: "",
     };
   }
 
   handleChange(e) {
     this.setState({
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value,
     });
   }
 
@@ -82,7 +82,7 @@ class Nuevo_Cliente extends Component {
 
     this.API_CCS.insertCliente(this.state)
 
-      .then(res => {
+      .then((res) => {
         if (res.sucess === true) {
           this.setState({
             data: [],
@@ -113,14 +113,14 @@ class Nuevo_Cliente extends Component {
             email: "",
             estado: "",
             entrega_vivienda: "",
-            entrega_escrituras: ""
+            entrega_escrituras: "",
           });
           MySwal.fire({
             title: "Correcto",
             text: "Cliente Guardado Correctamente!",
             type: "success",
             confirmButtonColor: "#C00327",
-            allowOutsideClick: false
+            allowOutsideClick: false,
           });
 
           this.setState({ selectedLead: null });
@@ -132,12 +132,12 @@ class Nuevo_Cliente extends Component {
               "Ocurrio un error al guardar el registro, por favor intenta de nuevo",
             type: "error",
             confirmButtonColor: "#C00327",
-            allowOutsideClick: true
+            allowOutsideClick: true,
           });
           this.setState({ isSaving: false });
         }
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
         this.setState({ isSaving: false });
       });
@@ -151,7 +151,7 @@ class Nuevo_Cliente extends Component {
             height: "340px",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
           <div>
@@ -392,7 +392,7 @@ class Nuevo_Cliente extends Component {
                           VILLA SAN LORENZO III,IV CUU
                         </option>
                         <option value="VILLA SAN LORENZO QTO">
-                          VILLA SAN LORENZO QTO
+                          VILLA SAN LORENZO QTO{" "}
                         </option>
                         <option value="VILLA SAN LORENZO V CUU">
                           VILLA SAN LORENZO V CUU
@@ -422,6 +422,10 @@ class Nuevo_Cliente extends Component {
                           ZAKIA CELESTE QRO
                         </option>
                         <option value="ZIBATA QRO">ZIBATA QRO</option>
+                        <option value="FERRARA MTY">FERRARA MTY</option>
+                        <option value="AMARELLO QRO">AMARELLO QRO</option>
+                        <option value="VARENNA QRO">VARENNA QRO</option>
+                        <option value="BOREAL CUU">BOREAL CUU</option>
                       </Input>
                     </FormGroup>
                   </Col>
@@ -601,6 +605,18 @@ class Nuevo_Cliente extends Component {
                         <option value="VILLA CAPRI">VILLA CAPRI</option>
                         <option value="VILLA TOSCANA">VILLA TOSCANA</option>
                         <option value="YOLA">YOLA</option>
+                        <option value="FERRARA I">FERRARA I</option>
+                        <option value="AMARELLO QRO">AMARELLO QRO</option>
+                        <option value="VARENNA QRO">VARENNA QRO</option>
+                        <option value="Cerrada Victoria">
+                          Cerrada Victoria
+                        </option>
+                        <option value="PROVENZA ARLES">PROVENZA ARLES</option>
+                        <option value="PROVENZA AVIÑON">PROVENZA AVIÑON</option>
+                        <option value="PROVENZA MARSELLA">
+                          PROVENZA MARSELLA
+                        </option>
+                        <option value="BOREAL CUU">BOREAL CUU</option>
                       </Input>
                     </FormGroup>
                   </Col>
@@ -691,9 +707,10 @@ class Nuevo_Cliente extends Component {
                           BORGIA MED C 119 M2
                         </option>
                         <option value="BORGIA MED. A 119 M2">
-                          BORGIA MED. A 119 M2
+                          BORGIA MED. A 119 M2{" "}
                         </option>
                         <option value="BORGIA MED. B 119 M2">
+                          {" "}
                           BORGIA MED. B 119 M2
                         </option>
                         <option value="BORGIA SP">BORGIA SP</option>
@@ -736,6 +753,7 @@ class Nuevo_Cliente extends Component {
                           FARINELLI C 137 M2
                         </option>
                         <option value="FARINELLI ESQ 137 M2">
+                          {" "}
                           FARINELLI ESQ 137 M2
                         </option>
                         <option value="FELINI A">FELINI A</option>
@@ -1017,6 +1035,33 @@ class Nuevo_Cliente extends Component {
                         <option value="VIVALDI B 217 M2">
                           VIVALDI B 217 M2
                         </option>
+                        <option value="POPOTLA TIPO C">POPOTLA TIPO C</option>
+                        <option value="POPOTLA TIPO F">POPOTLA TIPO F</option>
+                        <option value="LYON A ">LYON A </option>
+                        <option value="CAPRI A">CAPRI A</option>
+                        <option value="CAPRI B">CAPRI B</option>
+                        <option value="CAPRI B">CAPRI B</option>
+                        <option value="LUCCA B">LUCCA B</option>
+                        <option value="FLORENTINO A">FLORENTINO A</option>
+                        <option value="ORLEANS B">ORLEANS B</option>
+                        <option value="MODENA B">MODENA B</option>
+                        <option value="BORA B">BORA B</option>
+                        <option value="CAPRI A">CAPRI A</option>
+                        <option value="CAPRI B">CAPRI B</option>
+                        <option value="MODENA A">MODENA A</option>
+                        <option value="LYON A ">LYON A </option>
+                        <option value="AMALIFI A">AMALIFI A</option>
+                        <option value="LYON A ">LYON A </option>
+                        <option value="BELLAGIO A">BELLAGIO A</option>
+                        <option value="NERO A">NERO A</option>
+                        <option value="FLORENTINO B 70">FLORENTINO B 70</option>
+                        <option value="FLORENTINO A 70 ">
+                          FLORENTINO A 70{" "}
+                        </option>
+                        <option value="FLORENTINO A">FLORENTINO A</option>
+                        <option value="SIENA A">SIENA A</option>
+                        <option value="NIZA A">NIZA A</option>
+                        <option value="NIZA B">NIZA B</option>
                       </Input>
                     </FormGroup>
                   </Col>
