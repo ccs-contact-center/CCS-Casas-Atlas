@@ -425,16 +425,17 @@ class EditarRAC extends Component {
             //   timeZone: "America/Mexico_City"
             // });
 
+
             var CUU =
-              "ralvarez@atlasdesarrollos.com,pgutierrez@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com,rcorral@atlasdesarrollos.com,lortega@atlasdesarrollos.com,rbustillos@atlasdesarrollos.com,hmulia@atlasdesarrollos.com,asahagun@atlasdesarrollos.com,gvargas@atlasdesarrollos.com,ihuerta@atlasdesarrollos.com,cvargas@atlasdesarrollos.com";
+              "ralvarez@atlasdesarrollos.com,pgutierrez@atlasdesarrollos.com,lortega@atlasdesarrollos.com,rbustillos@atlasdesarrollos.com,hmulia@atlasdesarrollos.com,asahagun@atlasdesarrollos.com,gvargas@atlasdesarrollos.com,ihuerta@atlasdesarrollos.com,cvargas@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com";
             var MTY =
-              "ralvarez@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com,rvarela@atlasdesarrollos.com,msalas@atlasdesarrollos.com,aguzman@atlasdesarrollos.com,gserna@atlasdesarrollos.com,lcharles@atlasdesarrollos.com,jhernandez@atlasdesarrollos.com";
+              "ralvarez@atlasdesarrollos.com,msalas@atlasdesarrollos.com,aguzman@atlasdesarrollos.com,gserna@atlasdesarrollos.com,lcharles@atlasdesarrollos.com,jhernandez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com";
             var QRO =
-              "laguila@atlasdesarrollos.com,areyes@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com,dmartinez@atlasdesarrollos.com,jsalcedo@atlasdesarrollos.com,gramos@atlasdesarrollos.com,lmartinez1@atlasdesarrollos.com,acruz@atlasdesarrollos.com,amaldonado@atlasdesarrollos.com,ssoto@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,jchavez@atlasdesarrollos.com,jdelgado@atlasdesarrollos.com,vsenteno@atlasdesarrollos.com,bbarrera@atlasdesarrollos.com,mortega@atlasdesarrollos.com,";
+              "laguila@atlasdesarrollos.com,areyes@atlasdesarrollos.com,jsalcedo@atlasdesarrollos.com,gramos@atlasdesarrollos.com,lmartinez1@atlasdesarrollos.com,acruz@atlasdesarrollos.com,amaldonado@atlasdesarrollos.com,ssoto@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,jchavez@atlasdesarrollos.com,jdelgado@atlasdesarrollos.com,vsenteno@atlasdesarrollos.com,bbarrera@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com";
             var TRC =
-              "ralvarez@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com,cnavarro@atlasdesarrollos.com";
+              "ralvarez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var CDMX =
-              "agalarza@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,acastro@atlasdesarrollos.com,aurruticoechea@atlasdesarrollos.com";
+              "agalarza@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var AGS =
               "isaac.contreras@ccscontactcenter.com, iacontrerasg@icloud.com, brenda.hernandez@ccscontactcenter.com";
             var SJO =
@@ -1356,6 +1357,7 @@ class EditarRAC extends Component {
                     <option value="PROVENZA AVIÑON">PROVENZA AVIÑON</option>
                     <option value="PROVENZA MARSELLA">PROVENZA MARSELLA</option>
                     <option value="BOREAL CUU">BOREAL CUU</option>
+                    <option value="CERRADA VENECIA">CERRADA VENECIA</option>
                     
                   </Input>
                 </FormGroup>

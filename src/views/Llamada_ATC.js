@@ -1099,6 +1099,7 @@ class Inicio extends Component {
                                 PROVENZA MARSELLA
                               </option>
                               <option value="BOREAL CUU">BOREAL CUU</option>
+                              <option value="CERRADA VENECIA">CERRADA VENECIA</option>
                             </Input>
                           </FormGroup>
                         </Col>
