@@ -437,9 +437,9 @@ class EditarRAC extends Component {
             var CDMX =
               "agalarza@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var AGS =
-              "isaac.contreras@ccscontactcenter.com, iacontrerasg@icloud.com, carolina.perez@ccscontactcenter.com, luis.ballines@ccscontactcenter.com";
+              "isaac.contreras@ccscontactcenter.com, iacontrerasg@icloud.com, carolina.perez@ccscontactcenter.com, luis.ballines@ccscontactcenter.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var SJO =
-              "isaac.contreras@ccscontactcenter.com, iacontrerasg@gmail.com,carolina.perez@ccscontactcenter.com, luis.ballines@ccscontactcenter.com";
+              "isaac.contreras@ccscontactcenter.com, iacontrerasg@gmail.com, carolina.perez@ccscontactcenter.com, luis.ballines@ccscontactcenter.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var listaDistribucion = "";
 
             if (this.state.plaza === "AGUASCALIENTES") {
