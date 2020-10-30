@@ -427,15 +427,15 @@ class EditarRAC extends Component {
 
 
             var CUU =
-              "ralvarez@atlasdesarrollos.com,pgutierrez@atlasdesarrollos.com,lortega@atlasdesarrollos.com,rbustillos@atlasdesarrollos.com,hmulia@atlasdesarrollos.com,asahagun@atlasdesarrollos.com,gvargas@atlasdesarrollos.com,ihuerta@atlasdesarrollos.com,cvargas@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com";
+              "ralvarez@atlasdesarrollos.com,pgutierrez@atlasdesarrollos.com,lortega@atlasdesarrollos.com,rbustillos@atlasdesarrollos.com,hmulia@atlasdesarrollos.com,asahagun@atlasdesarrollos.com,gvargas@atlasdesarrollos.com,ihuerta@atlasdesarrollos.com,cvargas@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var MTY =
-              "ralvarez@atlasdesarrollos.com,msalas@atlasdesarrollos.com,aguzman@atlasdesarrollos.com,gserna@atlasdesarrollos.com,lcharles@atlasdesarrollos.com,jhernandez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com";
+              "ralvarez@atlasdesarrollos.com,msalas@atlasdesarrollos.com,aguzman@atlasdesarrollos.com,gserna@atlasdesarrollos.com,lcharles@atlasdesarrollos.com,jhernandez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,cvargas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var QRO =
-              "laguila@atlasdesarrollos.com,areyes@atlasdesarrollos.com,jsalcedo@atlasdesarrollos.com,gramos@atlasdesarrollos.com,lmartinez1@atlasdesarrollos.com,acruz@atlasdesarrollos.com,amaldonado@atlasdesarrollos.com,ssoto@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,jchavez@atlasdesarrollos.com,jdelgado@atlasdesarrollos.com,vsenteno@atlasdesarrollos.com,bbarrera@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com";
+              "laguila@atlasdesarrollos.com,areyes@atlasdesarrollos.com,jsalcedo@atlasdesarrollos.com,gramos@atlasdesarrollos.com,lmartinez1@atlasdesarrollos.com,acruz@atlasdesarrollos.com,amaldonado@atlasdesarrollos.com,ssoto@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,jchavez@atlasdesarrollos.com,jdelgado@atlasdesarrollos.com,vsenteno@atlasdesarrollos.com,bbarrera@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,cvargas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var TRC =
-              "ralvarez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
+              "ralvarez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,cvargas@atlasdesarrollos.com";
             var CDMX =
-              "agalarza@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
+              "agalarza@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,cvargas@atlasdesarrollos.com";
             var AGS =
               "isaac.contreras@ccscontactcenter.com, iacontrerasg@icloud.com, carolina.perez@ccscontactcenter.com, luis.ballines@ccscontactcenter.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var SJO =
