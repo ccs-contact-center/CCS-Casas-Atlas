@@ -437,7 +437,7 @@ class EditarRAC extends Component {
             var CDMX =
               "agalarza@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,cvargas@atlasdesarrollos.com, carolina.perez@ccscontactcenter.com, fernando.garrido@ccscontactcenter.com, isaac.contreras@ccscontactcenter.com";
             var AGS =
-              "isaac.contreras@ccscontactcenter.com, iacontrerasg@icloud.com, carolina.perez@ccscontactcenter.com, luis.ballines@ccscontactcenter.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
+              "isaac.contreras@ccscontactcenter.com, iacontrerasg@icloud.com";
             var SJO =
               "isaac.contreras@ccscontactcenter.com, iacontrerasg@gmail.com, carolina.perez@ccscontactcenter.com, luis.ballines@ccscontactcenter.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var listaDistribucion = "";
@@ -906,7 +906,7 @@ class EditarRAC extends Component {
 
                 </html>`;
 
-            console.log(bodynew);
+      
             var datitos = {
               to: listaDistribucion,
               subject: "Nuevo Reporte Levantado",
@@ -919,7 +919,41 @@ class EditarRAC extends Component {
               })
 
               .catch((err) => {
-                console.log("Correo no Enviado");
+                console.log("Correo no Enviado: Reintentando 1");
+                this.API_CCS.sendMail(datitos)
+                  .then((res) => {
+                    console.log("Enviado OK");
+                  })
+
+                  .catch((err) => {
+                    console.log("Correo no Enviado: Reintentando 2");
+                    this.API_CCS.sendMail(datitos)
+                      .then((res) => {
+                        console.log("Enviado OK");
+                      })
+
+                      .catch((err) => {
+                        console.log("Correo no Enviado: Reintentando 3");
+                        this.API_CCS.sendMail(datitos)
+                          .then((res) => {
+                            console.log("Enviado OK");
+                          })
+
+                          .catch((err) => {
+                            console.log("Correo no Enviado");
+                            MySwal.fire({
+                              title: "Error",
+                              text:
+                                "Ocurrio un error al enviar el correo, por favor reportalo a sistemas (" +
+                                err +
+                                ")",
+                              type: "error",
+                              confirmButtonColor: "#C00327",
+                              allowOutsideClick: true,
+                            });
+                          });
+                      });
+                  });
               });
 
             //###########aqui va el correo
