@@ -410,8 +410,17 @@ class EditarRAC extends Component {
       this.API_CCS.insertRAC(ticket)
         .then(async (res) => {
           if (res.sucess === true) {
-            var reporte = res.clave_reporte
-           
+            MySwal.fire({
+              title: "¡Correcto!",
+              html:
+                "¡Se levanto el ticket No. <b>" +
+                res.clave_reporte +
+                "</b> correctamente!",
+              type: "success",
+              confirmButtonText: "OK",
+              confirmButtonColor: "#C00327",
+              allowOutsideClick: false,
+            });
             //var now = new Date();
             // var curDate = now.toLocaleString("es-MX", {
             //   timeZone: "America/Mexico_City"
@@ -897,6 +906,7 @@ class EditarRAC extends Component {
 
                 </html>`;
 
+      
             var datitos = {
               to: listaDistribucion,
               subject: "Nuevo Reporte Levantado",
@@ -905,84 +915,28 @@ class EditarRAC extends Component {
 
             this.API_CCS.sendMail(datitos)
               .then((res) => {
-                MySwal.fire({
-                  title: "¡Correcto!",
-                  html:
-                    "¡Se levanto el ticket No. <b>" +
-                    reporte +
-                    "</b> correctamente!",
-                  type: "success",
-                  confirmButtonText: "OK",
-                  confirmButtonColor: "#C00327",
-                  allowOutsideClick: false,
-                });
                 console.log("Enviado OK");
-                this.setState({ selectedLead: null });
-                this.setState({ isSaving: false });
-                this.props.history.replace("/Inicio");
               })
 
               .catch((err) => {
                 console.log("Correo no Enviado: Reintentando 1");
                 this.API_CCS.sendMail(datitos)
                   .then((res) => {
-                    MySwal.fire({
-                      title: "¡Correcto!",
-                      html:
-                        "¡Se levanto el ticket No. <b>" +
-                        reporte +
-                        "</b> correctamente!",
-                      type: "success",
-                      confirmButtonText: "OK",
-                      confirmButtonColor: "#C00327",
-                      allowOutsideClick: false,
-                    });
                     console.log("Enviado OK");
-                    this.setState({ selectedLead: null });
-                    this.setState({ isSaving: false });
-                    this.props.history.replace("/Inicio");
                   })
 
                   .catch((err) => {
                     console.log("Correo no Enviado: Reintentando 2");
                     this.API_CCS.sendMail(datitos)
                       .then((res) => {
-                        MySwal.fire({
-                          title: "¡Correcto!",
-                          html:
-                            "¡Se levanto el ticket No. <b>" +
-                            reporte +
-                            "</b> correctamente!",
-                          type: "success",
-                          confirmButtonText: "OK",
-                          confirmButtonColor: "#C00327",
-                          allowOutsideClick: false,
-                        });
                         console.log("Enviado OK");
-                        this.setState({ selectedLead: null });
-                        this.setState({ isSaving: false });
-                        this.props.history.replace("/Inicio");
                       })
 
                       .catch((err) => {
                         console.log("Correo no Enviado: Reintentando 3");
                         this.API_CCS.sendMail(datitos)
                           .then((res) => {
-                            MySwal.fire({
-                              title: "¡Correcto!",
-                              html:
-                                "¡Se levanto el ticket No. <b>" +
-                                reporte +
-                                "</b> correctamente!",
-                              type: "success",
-                              confirmButtonText: "OK",
-                              confirmButtonColor: "#C00327",
-                              allowOutsideClick: false,
-                            });
                             console.log("Enviado OK");
-                            this.setState({ selectedLead: null });
-                            this.setState({ isSaving: false });
-                            this.props.history.replace("/Inicio");
                           })
 
                           .catch((err) => {
@@ -1003,6 +957,9 @@ class EditarRAC extends Component {
               });
 
             //###########aqui va el correo
+            this.setState({ selectedLead: null });
+            this.setState({ isSaving: false });
+            this.props.history.replace("/Inicio");
           } else {
             MySwal.fire({
               title: "Error",
