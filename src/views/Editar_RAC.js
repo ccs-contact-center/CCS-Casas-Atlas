@@ -225,10 +225,6 @@ class EditarRAC extends Component {
     var text = "";
 
     for (var key in obj) {
-      //console.log(' name=' + key + ' value=' + obj[key]);
-      // do some more stuff with obj[key]
-      console.clear();
-
       text =
         text +
         ` <div style='background-color:transparent;'>
@@ -409,6 +405,7 @@ class EditarRAC extends Component {
     } else {
       this.API_CCS.insertRAC(ticket)
         .then(async (res) => {
+          this.setState({ isSaving: true });
           if (res.sucess === true) {
             var reporte = res.clave_reporte;
 
@@ -912,8 +909,7 @@ class EditarRAC extends Component {
                   allowOutsideClick: false,
                 });
                 console.log("Enviado OK");
-                this.setState({ selectedLead: null });
-                this.setState({ isSaving: false });
+
                 this.props.history.replace("/Inicio");
               })
 
@@ -933,8 +929,7 @@ class EditarRAC extends Component {
                       allowOutsideClick: false,
                     });
                     console.log("Enviado OK");
-                    this.setState({ selectedLead: null });
-                    this.setState({ isSaving: false });
+
                     this.props.history.replace("/Inicio");
                   })
 
@@ -954,8 +949,7 @@ class EditarRAC extends Component {
                           allowOutsideClick: false,
                         });
                         console.log("Enviado OK");
-                        this.setState({ selectedLead: null });
-                        this.setState({ isSaving: false });
+
                         this.props.history.replace("/Inicio");
                       })
 
@@ -975,8 +969,7 @@ class EditarRAC extends Component {
                               allowOutsideClick: false,
                             });
                             console.log("Enviado OK");
-                            this.setState({ selectedLead: null });
-                            this.setState({ isSaving: false });
+
                             this.props.history.replace("/Inicio");
                           })
 
@@ -992,6 +985,7 @@ class EditarRAC extends Component {
                               confirmButtonColor: "#C00327",
                               allowOutsideClick: true,
                             });
+                            this.setState({ isSaving: false });
                           });
                       });
                   });
