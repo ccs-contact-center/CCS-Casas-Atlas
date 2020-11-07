@@ -130,6 +130,7 @@ class EditarRAC extends Component {
       lote: this.props.dataClient[0].lote,
       interior: this.props.dataClient[0].interior,
       no_cliente: this.props.dataClient[0].no_cliente,
+      client: this.props.dataClient[0].no_cliente,
       email: this.props.dataClient[0].email,
       tel1: this.props.dataClient[0].tel1,
       ext1: this.props.dataClient[0].ext1,
