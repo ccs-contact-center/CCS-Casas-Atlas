@@ -32,25 +32,25 @@ const columnsRACS = [
   {
     title: "Tipo",
     field: "tipo",
-    align: "center",
+    hozAlign: "center",
     width: 160,
   },
   {
     title: "Categoria",
     field: "categoria",
-    align: "center",
+    hozAlign: "center",
     width: 180,
   },
   {
     title: "Especificacion",
     field: "especificacion",
-    align: "center",
+    hozAlign: "center",
     width: 180,
   },
   {
     title: "Detalle",
     field: "detalle",
-    align: "left",
+    hozAlign: "left",
     width: 610,
   },
 ];
@@ -159,6 +159,10 @@ class EditarRAC extends Component {
             : JSON.parse(this.props.data[0].racs),
       });
     }
+  }
+
+  returnData() {
+    return JSON.parse(this.props.data[0].racs);
   }
   handleChange(e) {
     this.setState({
@@ -1688,7 +1692,7 @@ class EditarRAC extends Component {
                     ref={(ref) => (this.ref = ref)}
                     rowClick={this.rowClick}
                     index={"racsAsi"}
-                    data={this.state.reportesRACS}
+                    data={this.returnData()}
                     columns={columnsRACS}
                     tooltips={true}
                     layout={"fitColumns"}
@@ -1963,7 +1967,7 @@ class EditarRAC extends Component {
                     ref={(ref) => (this.ref = ref)}
                     rowClick={this.rowClick}
                     index={"racsAsi"}
-                    data={this.state.reportesRACS}
+                    data={this.returnData()}
                     columns={columnsRACS}
                     tooltips={true}
                     layout={"fitColumns"}
@@ -1971,6 +1975,7 @@ class EditarRAC extends Component {
                   />
                 </Col>
               </Row>
+
               <Row>
                 <Col>
                   <FormGroup>

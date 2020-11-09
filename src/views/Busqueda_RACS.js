@@ -21,7 +21,7 @@ const columnsRACS = [
   {
     title: "RAC",
     field: "clave_reporte",
-    align: "center",
+    hozAlign: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 120
@@ -29,7 +29,7 @@ const columnsRACS = [
   {
     title: "Fecha Alta",
     field: "fecha_alta",
-    align: "center",
+    hozAlign: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 120
@@ -37,7 +37,7 @@ const columnsRACS = [
   {
     title: "Contacto",
     field: "contacto",
-    align: "left",
+    hozAlign: "left",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 260
@@ -45,7 +45,7 @@ const columnsRACS = [
   {
     title: "Titular",
     field: "titular",
-    align: "left",
+    hozAlign: "left",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 260
@@ -53,7 +53,7 @@ const columnsRACS = [
   {
     title: "No. Cliente",
     field: "id_cliente",
-    align: "center",
+    hozAlign: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 120
@@ -61,7 +61,7 @@ const columnsRACS = [
   {
     title: "Plaza",
     field: "plaza",
-    align: "center",
+    hozAlign: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 120
@@ -69,7 +69,7 @@ const columnsRACS = [
   {
     title: "Desarrollo",
     field: "desarrollo",
-    align: "center",
+    hozAlign: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 140
@@ -77,7 +77,7 @@ const columnsRACS = [
   {
     title: "Prototipo",
     field: "prototipo",
-    align: "center",
+    hozAlign: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 120
@@ -85,7 +85,7 @@ const columnsRACS = [
   {
     title: "Cerrada",
     field: "cerrada",
-    align: "center",
+    hozAlign: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 100
@@ -93,7 +93,7 @@ const columnsRACS = [
   {
     title: "Mz",
     field: "manzana",
-    align: "center",
+    hozAlign: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 65
@@ -101,7 +101,7 @@ const columnsRACS = [
   {
     title: "Lt",
     field: "lote",
-    align: "center",
+    hozAlign: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 60
@@ -109,7 +109,7 @@ const columnsRACS = [
   {
     title: "Int",
     field: "interior",
-    align: "center",
+    hozAlign: "center",
     headerFilter: true,
     headerFilterPlaceholder: "Buscar",
     width: 60
