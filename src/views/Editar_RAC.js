@@ -1315,6 +1315,7 @@ class EditarRAC extends Component {
                     <option value="TOLEDO">TOLEDO</option>
                     <option value="TRAMONTO">TRAMONTO</option>
                     <option value="VARENNA QRO">VARENNA QRO</option>
+                    <option value="CERRADA VENECIA">CERRADA VENECIA</option>
                   </Input>
                 </FormGroup>
               </Col>
