@@ -628,6 +628,7 @@ class Nuevo_Cliente extends Component {
                         <option value="VIOLA A">VIOLA A</option>
                         <option value="VIOLA B">VIOLA B</option>
                         <option value="VIOLA C">VIOLA C</option>
+                        <option value="SIENA A">SIENA A</option>
                       </Input>
                     </FormGroup>
                   </Col>
