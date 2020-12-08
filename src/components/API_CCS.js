@@ -235,7 +235,7 @@ class API_CCS {
 
   sendMail(data) {
 
-    return this.fetch('https://api.ccscontactcenter.com/v1/interface/send-email', {    
+    return this.fetch('https://api.ccscontactcenter.com/v1/interface/send-email-atlas', {    
          method: 'POST',
          body: JSON.stringify(data)
      }).then(res => {
