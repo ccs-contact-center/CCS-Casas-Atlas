@@ -1237,6 +1237,8 @@ class EditarRAC extends Component {
                     </option>
                     <option value="VILLA TOLEDO QRO">VILLA TOLEDO QRO</option>
                     <option value="ZAKIA CELESTE QRO">ZAKIA CELESTE QRO</option>
+                    <option value="ALLEZA NORTE">ALLEZA NORTE</option>
+                    <option value="MAGENTA QRO">MAGENTA QRO</option>
                   </Input>
                 </FormGroup>
               </Col>
@@ -1316,6 +1318,8 @@ class EditarRAC extends Component {
                     <option value="TRAMONTO">TRAMONTO</option>
                     <option value="VARENNA QRO">VARENNA QRO</option>
                     <option value="CERRADA VENECIA">CERRADA VENECIA</option>
+                    <option value="ALLEZA NORTE">ALLEZA NORTE</option>
+                    <option value="MAGENTA QRO">MAGENTA QRO</option>
                   </Input>
                 </FormGroup>
               </Col>
