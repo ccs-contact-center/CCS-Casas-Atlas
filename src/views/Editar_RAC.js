@@ -414,7 +414,7 @@ class EditarRAC extends Component {
             var reporte = res.clave_reporte;
 
             var CUU =
-              "cvargas@atlasdesarrollos.com,ihuerta@atlasdesarrollos.com,asahagun@atlasdesarrollos.com,hmulia@atlasdesarrollos.com,rbustillos@atlasdesarrollos.com,lortega@atlasdesarrollos.com,pgutierrez@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com";
+              "cvargas@atlasdesarrollos.com,ihuerta@atlasdesarrollos.com,asahagun@atlasdesarrollos.com,hmulia@atlasdesarrollos.com,rbustillos@atlasdesarrollos.com,lortega@atlasdesarrollos.com,mcastro@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com";
             var MTY =
               "jhernandez@atlasdesarrollos.com,lcharles@atlasdesarrollos.com,gserna@atlasdesarrollos.com,aguzman@atlasdesarrollos.com,msalas@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com,jceja@atlasdesarrollos.com, ecortes@atlasdesarrollos.com";
             var QRO =
