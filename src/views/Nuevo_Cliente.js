@@ -463,6 +463,7 @@ class Nuevo_Cliente extends Component {
                         <option value="CERRADA VENECIA">CERRADA VENECIA</option>
                         <option value="ALLEZA NORTE">ALLEZA NORTE</option>
                         <option value="MAGENTA QRO">MAGENTA QRO</option>
+                        <option value="FERRARA I E2">FERRARA I E2</option>
                       </Input>
                     </FormGroup>
                   </Col>
