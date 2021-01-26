@@ -1321,6 +1321,8 @@ class EditarRAC extends Component {
                     <option value="ALLEZA NORTE">ALLEZA NORTE</option>
                     <option value="MAGENTA QRO">MAGENTA QRO</option>
                     <option value="FERRARA I E2">FERRARA I E2</option>
+                    
+                    
                   </Input>
                 </FormGroup>
               </Col>
@@ -1487,7 +1489,7 @@ class EditarRAC extends Component {
                     <option value="VIOLA B">VIOLA B</option>
                     <option value="VIOLA C">VIOLA C</option>
                     <option value="SIENA A">SIENA A</option>
-                    
+                    <option value="TORINO B 5.50">TORINO B 5.50</option>
                   </Input>
                 </FormGroup>
               </Col>
