@@ -414,19 +414,19 @@ class EditarRAC extends Component {
             var reporte = res.clave_reporte;
 
             var CUU =
-              "cvargas@atlasdesarrollos.com,ihuerta@atlasdesarrollos.com,asahagun@atlasdesarrollos.com,hmulia@atlasdesarrollos.com,rbustillos@atlasdesarrollos.com,lortega@atlasdesarrollos.com,mcastro@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com";
+              "vrobles@atlasdesarrollos.com, cvargas@atlasdesarrollos.com,ihuerta@atlasdesarrollos.com,asahagun@atlasdesarrollos.com,hmulia@atlasdesarrollos.com,rbustillos@atlasdesarrollos.com,lortega@atlasdesarrollos.com,mcastro@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com";
             var MTY =
-              "jhernandez@atlasdesarrollos.com,lcharles@atlasdesarrollos.com,gserna@atlasdesarrollos.com,aguzman@atlasdesarrollos.com,msalas@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com,jceja@atlasdesarrollos.com, ecortes@atlasdesarrollos.com";
+              "vrobles@atlasdesarrollos.com, jhernandez@atlasdesarrollos.com,lcharles@atlasdesarrollos.com,gserna@atlasdesarrollos.com,aguzman@atlasdesarrollos.com,msalas@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com,jceja@atlasdesarrollos.com, ecortes@atlasdesarrollos.com";
             var QRO =
               "vrobles@atlasdesarrollos.com, bbarrera@atlasdesarrollos.com,vsenteno@atlasdesarrollos.com,jdelgado@atlasdesarrollos.com,jchavez@atlasdesarrollos.com,ralvarez@atlasdesarrollos.com,ssoto@atlasdesarrollos.com,amaldonado@atlasdesarrollos.com,acruz@atlasdesarrollos.com,lmartinez1@atlasdesarrollos.com,gramos@atlasdesarrollos.com,jsalcedo@atlasdesarrollos.com,gvillagran@atlasdesarrollos.com,laguila@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com";
             var TRC =
-              "ralvarez@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com";
+              "vrobles@atlasdesarrollos.com, ralvarez@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com";
             var CDMX =
-              "ralvarez@atlasdesarrollos.com,agalarza@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com";
+              "vrobles@atlasdesarrollos.com, ralvarez@atlasdesarrollos.com,agalarza@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com";
             var AGS =
-              "carlos.gomez@ccscontactcenter.com, iacontrerasg@icloud.com";
+              "vrobles@atlasdesarrollos.com, carlos.gomez@ccscontactcenter.com, iacontrerasg@icloud.com";
             var SJO =
-              "carlos.gomez@ccscontactcenter.com, iacontrerasg@gmail.com, carolina.perez@ccscontactcenter.com, luis.ballines@ccscontactcenter.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
+              "vrobles@atlasdesarrollos.com, carlos.gomez@ccscontactcenter.com, iacontrerasg@gmail.com, carolina.perez@ccscontactcenter.com, luis.ballines@ccscontactcenter.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var listaDistribucion = "";
 
             if (this.state.plaza === "AGUASCALIENTES") {
