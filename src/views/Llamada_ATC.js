@@ -755,6 +755,7 @@ class Inicio extends Component {
                               </option>
                               <option value="ALLEZA NORTE">ALLEZA NORTE</option>
                               <option value="MAGENTA QRO">MAGENTA QRO</option>
+                              <option value="ALLEGRA VALLE CONDESA">ALLEGRA VALLE CONDESA</option>
                             </Input>
                           </FormGroup>
                         </Col>
@@ -897,6 +898,7 @@ class Inicio extends Component {
                               <option value="ALLEZA NORTE">ALLEZA NORTE</option>
                               <option value="MAGENTA QRO">MAGENTA QRO</option>
                               <option value="FERRARA I E2">FERRARA I E2</option>
+                              <option value="VALLE CONDESA">VALLE CONDESA</option>
                             </Input>
                           </FormGroup>
                         </Col>
@@ -1121,6 +1123,9 @@ class Inicio extends Component {
                               <option value="VIOLA C">VIOLA C</option>
                               <option value="SIENA A">SIENA A</option>
                               <option value="TORINO B 5.50">TORINO B 5.50</option>
+                              <option value="PADERNO A">PADERNO A</option>
+                              <option value="PADERNO B">PADERNO B</option>
+                              <option value="VARESE D PH">VARESE D PH</option>
                             </Input>
                           </FormGroup>
                         </Col>
