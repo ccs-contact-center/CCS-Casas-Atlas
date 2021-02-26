@@ -424,7 +424,7 @@ class EditarRAC extends Component {
             var CDMX =
               "vrobles@atlasdesarrollos.com, ralvarez@atlasdesarrollos.com,agalarza@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com,postventaatlas@atlasdesarrollos.com,manuel.gonzalez@ccscontactcenter.com,luis.ballines@ccscontactcenter.com,carlos.gomez@ccscontactcenter.com";
             var AGS =
-              "vrobles@atlasdesarrollos.com, carlos.gomez@ccscontactcenter.com, iacontrerasg@icloud.com";
+              "carlos.gomez@ccscontactcenter.com, iacontrerasg@icloud.com";
             var SJO =
               "vrobles@atlasdesarrollos.com, carlos.gomez@ccscontactcenter.com, iacontrerasg@gmail.com, carolina.perez@ccscontactcenter.com, luis.ballines@ccscontactcenter.com,postventaatlas@atlasdesarrollos.com,agonzalez@atlasdesarrollos.com";
             var listaDistribucion = "";
