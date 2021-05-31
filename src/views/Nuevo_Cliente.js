@@ -366,6 +366,9 @@ class Nuevo_Cliente extends Component {
                         <option value="ALLEZA NORTE">ALLEZA NORTE</option>
                         <option value="MAGENTA QRO">MAGENTA QRO</option>
                         <option value="ALLEGRA VALLE CONDESA">ALLEGRA VALLE CONDESA</option>
+                        <option value="FRACCIONAMIENTO MAGENTA DEPTOS QRO">FRACCIONAMIENTO MAGENTA DEPTOS QRO</option>
+                        <option value="FRACCIONAMIENTO ALLEZA MIRADOR FASE 1">FRACCIONAMIENTO ALLEZA MIRADOR FASE 1</option>
+                        <option value="FRACCIONAMIENTO PITAHAYA QRO">FRACCIONAMIENTO PITAHAYA QRO</option>  
                       </Input>
                     </FormGroup>
                   </Col>
@@ -466,6 +469,7 @@ class Nuevo_Cliente extends Component {
                         <option value="MAGENTA QRO">MAGENTA QRO</option>
                         <option value="FERRARA I E2">FERRARA I E2</option>
                         <option value="VALLE CONDESA">VALLE CONDESA</option>
+                        <option value="ALLEZA MIRADOR FASE 1">ALLEZA MIRADOR FASE 1</option>
                       </Input>
                     </FormGroup>
                   </Col>
@@ -640,6 +644,7 @@ class Nuevo_Cliente extends Component {
                         <option value="PADERNO A">PADERNO A</option>
                         <option value="PADERNO B">PADERNO B</option>
                         <option value="VARESE D PH">VARESE D PH</option>
+                        <option value="SIENA A ROOF">SIENA A ROOF</option>
                       </Input>
                     </FormGroup>
                   </Col>
