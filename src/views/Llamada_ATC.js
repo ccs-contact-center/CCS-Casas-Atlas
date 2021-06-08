@@ -759,6 +759,9 @@ class Inicio extends Component {
                               <option value="FRACCIONAMIENTO MAGENTA DEPTOS QRO">FRACCIONAMIENTO MAGENTA DEPTOS QRO</option>
                               <option value="FRACCIONAMIENTO ALLEZA MIRADOR FASE 1">FRACCIONAMIENTO ALLEZA MIRADOR FASE 1</option>
                               <option value="FRACCIONAMIENTO PITAHAYA QRO">FRACCIONAMIENTO PITAHAYA QRO</option>
+                              <option value="MAGENTA DEPTOS QRO">MAGENTA DEPTOS QRO</option>
+                              <option value="ALLEZA MIRADOR FASE 1">ALLEZA MIRADOR FASE 1</option>
+
                             </Input>
                           </FormGroup>
                         </Col>
@@ -903,6 +906,8 @@ class Inicio extends Component {
                               <option value="FERRARA I E2">FERRARA I E2</option>
                               <option value="VALLE CONDESA">VALLE CONDESA</option>
                               <option value="ALLEZA MIRADOR FASE 1">ALLEZA MIRADOR FASE 1</option>
+                              <option value="PITAHAYA">PITAHAYA</option>
+                              
                             </Input>
                           </FormGroup>
                         </Col>
@@ -1131,6 +1136,8 @@ class Inicio extends Component {
                               <option value="PADERNO B">PADERNO B</option>
                               <option value="VARESE D PH">VARESE D PH</option>
                               <option value="SIENA A ROOF">SIENA A ROOF</option>
+                              <option value="ACANTO A">ACANTO A</option>
+                              <option value="LARIS A">LARIS A</option>
                             </Input>
                           </FormGroup>
                         </Col>
