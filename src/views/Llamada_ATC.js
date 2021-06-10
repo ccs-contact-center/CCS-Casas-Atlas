@@ -761,6 +761,7 @@ class Inicio extends Component {
                               <option value="FRACCIONAMIENTO PITAHAYA QRO">FRACCIONAMIENTO PITAHAYA QRO</option>
                               <option value="MAGENTA DEPTOS QRO">MAGENTA DEPTOS QRO</option>
                               <option value="ALLEZA MIRADOR FASE 1">ALLEZA MIRADOR FASE 1</option>
+                              <option value="PITAHAYA QRO">PITAHAYA QRO</option>
 
                             </Input>
                           </FormGroup>
@@ -1138,6 +1139,8 @@ class Inicio extends Component {
                               <option value="SIENA A ROOF">SIENA A ROOF</option>
                               <option value="ACANTO A">ACANTO A</option>
                               <option value="LARIS A">LARIS A</option>
+                              <option value="VARESE C PH">VARESE C PH</option>
+
                             </Input>
                           </FormGroup>
                         </Col>
